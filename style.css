@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 0;
+    margin: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +27,10 @@ body {
     border-radius: 3px;
     display: flex;
     flex-direction: column;
+}
+
+.cargo {
+    font-weight: bold;
 }
 
 .teclado {
@@ -52,28 +56,35 @@ body {
     align-items: center;
     margin: 10px;
     cursor: pointer;
-    box-shadow: 3px 3px 0px #555;
-    border-radius: 1px;
+    box-shadow: 3px 3px 0px #333;
+    border-radius: 2px;
 }
 
 .btn-branco {
     background-color: #fff;
     color: #000;
     font-size: 15px;
+    font-weight: bold;
+    box-shadow: -3px -2px 0px #bbb;
+
 }
 
 .btn-corrige {
-    background-color: #f09046;
+    background-color: #da5e00;
     color: #000;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: -3px -2px 0px #b35208;
 }
 
 .btn-confirma {
-    background-color: #0f0;
+    background-color: #048304;
     color: #000;
     font-size: 15px;
     width: 90px;
     height: 50px;
+    font-weight: bold;
+    box-shadow: -3px -2px 0px #066706;
 }
 
 .d-1 {
@@ -112,7 +123,8 @@ body {
     border: 1px solid #000;
     text-align: center;
     line-height: 40px;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .pisca {
@@ -159,8 +171,8 @@ body {
 .aviso-grande {
     font-size: 40px;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
+    float: right;
+    margin-top: 44px;
 }
 
 .aviso-gigante {
