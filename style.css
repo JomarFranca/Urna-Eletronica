@@ -1,8 +1,15 @@
+@keyframes pisca {
+    0% { opacity: 0.2;}
+    50% { opacity: 1;}
+    100% { opacity: 0.2;}
+}
+
 body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .urna {
@@ -16,7 +23,10 @@ body {
     width: 500px;
     height: 320px;
     background: linear-gradient(to right, #e8e8e8, #c1c1c1);
-
+    border: 2px solid #555;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
 }
 
 .teclado {
@@ -29,7 +39,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
 }
 
 .teclado-botao {
@@ -44,6 +53,7 @@ body {
     margin: 10px;
     cursor: pointer;
     box-shadow: 3px 3px 0px #555;
+    border-radius: 1px;
 }
 
 .btn-branco {
@@ -64,4 +74,84 @@ body {
     font-size: 15px;
     width: 90px;
     height: 50px;
+}
+
+.d-1 {
+    flex: 1;
+    display: flex;
+}
+
+.d-1-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px
+}
+
+.d-1-1 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.d-1-2 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-1-3 {
+    height: 50px;
+}
+
+.numero {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+.pisca {
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.d-1-4 {
+    flex: 1;
+    line-height: 30px;
+}
+
+.d-1-right {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.d-1-image {
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.d-1-image img {
+    width: 100%;
+}
+
+.d-1-image.small{
+    width: 80%;
+    font-size: 12px;
+}
+
+.d-2 {
+    height: 50px;
+    font-size: 14px;
+    border-top: 2px solid #000;
+    padding-left: 10px;
 }
