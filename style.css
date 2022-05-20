@@ -1,3 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    list-style: none;
+}
+
 @keyframes pisca {
     0% { opacity: 0.2;}
     50% { opacity: 1;}
@@ -5,18 +12,20 @@
 }
 
 body {
-    margin: 100px;
+    width: auto;
+    height: 600px;
     display: flex;
-    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif
+    justify-content: space-between;
 }
 
 .urna {
+    margin-top: 40px;
     background-color: #dbd5c9;
     padding: 30px;
     display: flex;
-
 }
 
 .tela {
@@ -183,4 +192,61 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cola {
+    width: 1400px;
+    height: auto;
+    padding: 10px;
+    color: #fff;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    column-gap: 20px;
+}
+
+
+
+/* RODAPÉ */
+
+footer {
+    width: 1400px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-texto {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.footer-texto a {
+    color: #7ac9e9;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.footer-texto a:hover {
+    color: #0a4d99;
+    text-decoration: none;
 }

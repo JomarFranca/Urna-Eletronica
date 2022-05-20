@@ -1,78 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urna Eletrônica</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="urna">
-        <div class="tela">
-            <div class="d-1">
-                <div class="d-1-left">
-                    <div class="d-1-1">
-                        <span>SEU VOTO PARA</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Urna Eletrônica</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="urna">
+            <div class="tela">
+                <div class="d-1">
+                    <div class="d-1-left">
+                        <div class="d-1-1">
+                            <span>SEU VOTO PARA</span>
+                        </div>
+                        <div class="d-1-2">
+                            <span class="cargo">VEREADOR</span>
+                        </div>
+                        <div class="d-1-3">
+                            <div class="numero pisca"></div>
+                            <div class="numero"></div>
+                        </div>
+                        <div class="d-1-4">
+                            Nome: FULANO DE TAL <br />
+                            Partido: QQQ <br />
+                            Vice-Prefeito: BELTRANO DE TAL
+                        </div>
                     </div>
-                    <div class="d-1-2">
-                        <span class="cargo">VEREADOR</span>
-                    </div>
-                    <div class="d-1-3">
-                        <div class="numero pisca"></div>
-                        <div class="numero"></div>
-                    </div>
-                    <div class="d-1-4">
-                        Nome: FULANO DE TAL <br/>
-                        Partido: QQQ <br/>
-                        Vice-Prefeito: BELTRANO DE TAL
+                    <div class="d-1-right">
+                        <div class="d-1-image">
+                            <img src="./img/" alt="" />
+                            Prefeito
+                        </div>
+                        <div class="d-1-image small">
+                            <img src="./img/" alt="" />
+                            Vice-Prefeito
+                        </div>
                     </div>
                 </div>
-                <div class="d-1-right">
-                    <div class="d-1-image">
-                        <img src="./img/" alt="">
-                        Prefeito
+                <div class="d-2">
+                    Aperte a tela: <br />
+                    <strong>CONFIRMA</strong> para <strong>CONFIRMAR</strong> este voto
+                    <br />
+                    <strong>CORRIGE</strong> para <strong>REINICIAR</strong> este voto
+                </div>
+            </div>
+            <div class="teclado">
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="clicou('1')">1</div>
+                    <div class="teclado-botao" onclick="clicou('2')">2</div>
+                    <div class="teclado-botao" onclick="clicou('3')">3</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="clicou('4')">4</div>
+                    <div class="teclado-botao" onclick="clicou('5')">5</div>
+                    <div class="teclado-botao" onclick="clicou('6')">6</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="clicou('7')">7</div>
+                    <div class="teclado-botao" onclick="clicou('8')">8</div>
+                    <div class="teclado-botao" onclick="clicou('9')">9</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="clicou('0')">0</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao btn-branco" onclick="branco()">
+                        BRANCO
                     </div>
-                    <div class="d-1-image small">
-                        <img src="./img/" alt="">
-                        Vice-Prefeito
+                    <div class="teclado-botao btn-corrige" onclick="corrige()">
+                        CORRIGE
+                    </div>
+                    <div class="teclado-botao btn-confirma" onclick="confirma()">
+                        CONFIRMA
                     </div>
                 </div>
             </div>
-            <div class="d-2">
-                Aperte a tela: <br/>
-                <strong>CONFIRMA</strong> para <strong>CONFIRMAR</strong> este voto <br/>
-                <strong>CORRIGE</strong> para <strong>REINICIAR</strong> este voto
-            </div>
         </div>
-        <div class="teclado">
-            <div class="teclado-linha">
-                <div class="teclado-botao" onclick="clicou('1')">1</div>
-                <div class="teclado-botao" onclick="clicou('2')">2</div>
-                <div class="teclado-botao" onclick="clicou('3')">3</div>
-            </div>
-            <div class="teclado-linha">
-                <div class="teclado-botao" onclick="clicou('4')">4</div>
-                <div class="teclado-botao" onclick="clicou('5')">5</div>
-                <div class="teclado-botao" onclick="clicou('6')">6</div>
-            </div>
-            <div class="teclado-linha">
-                <div class="teclado-botao" onclick="clicou('7')">7</div>
-                <div class="teclado-botao" onclick="clicou('8')">8</div>
-                <div class="teclado-botao" onclick="clicou('9')">9</div>
-            </div>
-            <div class="teclado-linha">
-                <div class="teclado-botao" onclick="clicou('0')">0</div>
-            </div>
-            <div class="teclado-linha">
-                <div class="teclado-botao btn-branco" onclick="branco()">BRANCO</div>
-                <div class="teclado-botao btn-corrige" onclick="corrige()">CORRIGE</div>
-                <div class="teclado-botao btn-confirma" onclick="confirma()">CONFIRMA</div>
-            </div>
-        </div>
-    </div>
 
-    <script src="etapas.js"></script>
-    <script src="script.js"></script>
-</body>
+        <div class="cola">
+            <div class="container">
+                <div class="vereador-1">
+                    <h4>VEREADOR PARA VOTAÇÃO:</h4>
+                    <br />
+                    <p>Nome: Helena da Silva</p>
+                    <p>Número: <strong>77111</strong></p>
+                    <p>Partido: TdoB</p>
+                </div>
+                <div class="verador-2">
+                    <p>Nome: Marcelo Sousa</p>
+                    <p>Número: <strong>88722</strong></p>
+                    <p>Partido: ADEBRA</p>
+                </div>
+                <div class="prefeito-1">
+                    <h4>PREFEITO PARA VOTAÇÃO:</h4>
+                    <p>Nome: João de Silva</p>
+                    <p>Número:<strong>77</strong></p>
+                    <p>Partido: TdoB</p>
+                    <p>Vice: António de Paula</p>
+                </div>
+                <div class="prefeito-2">
+                    <p>Nome: Inês Maria</p>
+                    <p>Número: <strong>88</strong></p>
+                    <p>Partido: ADEBRA</p>
+                    <p>Vice: Luís Felipe</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="rodape">
+                <p class="footer-texto">
+                    Criação e Desenvolvimento:
+                    <a href="https://github.com/Jomar777" target="_blank">
+                        Jomar A. França
+                    </a>
+                    2022 -
+                    <a
+                        href="https://www.linkedin.com/in/jomar-almeida-fran%C3%A7a/"
+                        target="_blank"
+                        >Front End Devenloper</a
+                    >
+                </p>
+            </div>
+        </footer>
+
+        <script src="etapas.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
